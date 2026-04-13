@@ -1,5 +1,5 @@
 {
-    "domain": "monkeytype",
+    "domain": "monkeytype_stats",
     "name": "Monkeytype",
     "requirements":[],
     "integration_type": "hub",
