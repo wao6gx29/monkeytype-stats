@@ -1,8 +1,11 @@
 {
-    "domain": "monkeytype_stats",
-    "name": "Monkeytype",
+    "domain": "monkeytype",
+    "name": "Monkeytype stats",
+    "codeowners": "@wao6gx29",
     "requirements":[],
+    "dependencies":[],
     "integration_type": "hub",
     "iot_class": "cloud_polling",
-    "version": "1.0.0"
+    "version": "1.0.1",
+    "config_flow": "true"
 }
