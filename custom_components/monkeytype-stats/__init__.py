@@ -18,6 +18,22 @@ async def public_datas_fetch():
           print('Temps de frape total : ' + str(timeTyping))
 asyncio.run(public_datas_fetch())
 
+profile_params = {'name': 'odghsx'}
+
+async def profile_datas_fetch():
+    async with aiohttp.ClientSession() as session:
+        async with session.get(base_url + '/users/streak') as resp:
+          datas = await resp.json()
+          print(datas)
+          lastResultTimestamp = datas["data"]["lastResultTimestamp"]
+          length = datas["data"]["length"]
+          maxLength = datas["data"]["maxLength"]
+          hourOffset = datas["data"]["hourOffset"]
+          print('lastResultTimestamp : ' + str(lastResultTimestamp))
+          print('Taille de la streak : ' + str(length))
+          print('Plus grande streak : ' + str(maxLength))
+          print('hoursOffset ' + str(hourOffset))
+asyncio.run(profile_datas_fetch())
 
 
 #public_stats = aiohttp.get(
