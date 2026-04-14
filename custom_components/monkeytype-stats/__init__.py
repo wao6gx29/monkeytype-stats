@@ -12,6 +12,7 @@ async def main():
           print(await resp.text())
           print(await resp.json())
           datas = resp.json()
+          print(datas)
           testsCompleted = datas["data"]["testsCompleted"]
           testsStarted = datas["data"]["testsStarted"]
           timeTyping = datas["data"]["timeTyping"]
