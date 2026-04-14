@@ -16,9 +16,9 @@ async def main():
           testsCompleted = datas["data"]["testsCompleted"]
           testsStarted = datas["data"]["testsStarted"]
           timeTyping = datas["data"]["timeTyping"]
-          print('Nombre de tests complétés : ' + testsCompleted)
-          print('Nombre de tests commencés : ' + testsStarted)
-          print('Temps de frape total : ' + timeTyping)
+          print('Nombre de tests complétés : ' + str(testsCompleted))
+          print('Nombre de tests commencés : ' + str(testsStarted))
+          print('Temps de frape total : ' + str(timeTyping))
 
 
 asyncio.run(main())
