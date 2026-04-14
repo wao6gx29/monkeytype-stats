@@ -9,7 +9,7 @@ async def main():
     async with aiohttp.ClientSession() as session:
         async with session.get(base_url + '/public/typingStats') as resp:
           print(resp.status)
-          print(await resp.test())
+          print(await resp.text())
 
 asyncio.run(main())
 
