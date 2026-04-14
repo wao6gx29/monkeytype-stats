@@ -1,6 +1,5 @@
 {
   "name": "Monkeytype Stats",
   "hacs": "1.0.0",
-  "homeassistant": "2026.4",
-  "render_readme": true
+  "homeassistant": "2026.4"
 }
