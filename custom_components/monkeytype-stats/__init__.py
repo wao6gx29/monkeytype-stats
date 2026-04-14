@@ -11,9 +11,9 @@ async def main():
           print(resp.status)
           print(await resp.text())
           print(await resp.json())
-          testsCompleted = resp.json["data"]["testsCompleted"]
-          testsStarted = resp.json["data"]["testsStarted"]
-          timeTyping = resp.json["data"]["timeTyping"]
+          testsCompleted = resp.json()["data"]["testsCompleted"]
+          testsStarted = resp.json()["data"]["testsStarted"]
+          timeTyping = resp.json()["data"]["timeTyping"]
           print('Nombre de tests complétés : ' + testsCompleted)
           print('Nombre de tests commencés : ' + testsStarted)
           print('Temps de frape total : ' + timeTyping)
