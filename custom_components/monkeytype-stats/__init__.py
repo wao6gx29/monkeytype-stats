@@ -8,9 +8,6 @@ ape_key = "cle_api"
 async def main():
     async with aiohttp.ClientSession() as session:
         async with session.get(base_url + '/public/typingStats') as resp:
-          #print(resp.status)
-          #print(await resp.text())
-          #print(await resp.json())
           datas = await resp.json()
           print(datas)
           testsCompleted = datas["data"]["testsCompleted"]
@@ -19,8 +16,6 @@ async def main():
           print('Nombre de tests complétés : ' + str(testsCompleted))
           print('Nombre de tests commencés : ' + str(testsStarted))
           print('Temps de frape total : ' + str(timeTyping))
-
-
 asyncio.run(main())
 
 
