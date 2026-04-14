@@ -1,5 +1,5 @@
 """ Monkeytype stats integration"""
-import requests
+import aiohttp
 
 base_url = "https://api.monkeytype.com" 
 ape_key = "cle_api"
