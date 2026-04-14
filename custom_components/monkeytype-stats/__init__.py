@@ -24,6 +24,8 @@ async def profile_datas_fetch():
     async with aiohttp.ClientSession() as session:
         async with session.get(base_url + '/users/streak') as resp:
           datas = await resp.json()
+          code = await resp.status
+          print(code)
           print(datas)
           lastResultTimestamp = datas["data"]["lastResultTimestamp"]
           length = datas["data"]["length"]
