@@ -18,7 +18,7 @@ async def public_datas_fetch():
           print('Temps de frape total : ' + str(timeTyping))
 asyncio.run(public_datas_fetch())
 
-profile_params = {'name': 'odghsx', 'Authorization':ape_key}
+profile_params = {'name': 'odghsx', 'Authorization': f'ApeKey {ape_key}'}
 
 async def profile_datas_fetch():
     async with aiohttp.ClientSession() as session:
