@@ -3,7 +3,7 @@ import aiohttp
 import asyncio
 
 base_url = "https://api.monkeytype.com" 
-ape_key = "cle_api"
+ape_key = "NjlkZTI4ZDRiMzkyZjBiNWM5YTg4Zjg4Llpyc01tR1llQWJUZUtDWVg2ZXZwNUVaR0V2RkZuMjRT"
 
 async def public_datas_fetch():
     async with aiohttp.ClientSession() as session:
@@ -18,7 +18,7 @@ async def public_datas_fetch():
           print('Temps de frape total : ' + str(timeTyping))
 asyncio.run(public_datas_fetch())
 
-profile_params = {'name': 'odghsx', 'ApeKey':'NjlkZTI4ZDRiMzkyZjBiNWM5YTg4Zjg4Llpyc01tR1llQWJUZUtDWVg2ZXZwNUVaR0V2RkZuMjRT'}
+profile_params = {'name': 'odghsx', 'ApeKey':ape_key}
 
 async def profile_datas_fetch():
     async with aiohttp.ClientSession() as session:
