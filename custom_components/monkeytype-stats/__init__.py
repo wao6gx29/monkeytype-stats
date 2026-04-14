@@ -11,7 +11,7 @@ async def main():
           #print(resp.status)
           #print(await resp.text())
           #print(await resp.json())
-          datas = resp.json()
+          datas = await resp.json()
           print(datas)
           testsCompleted = datas["data"]["testsCompleted"]
           testsStarted = datas["data"]["testsStarted"]
