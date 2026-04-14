@@ -1,1 +1,0 @@
-""" Monkeytype stats integration"""
