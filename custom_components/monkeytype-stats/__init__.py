@@ -5,7 +5,7 @@ import asyncio
 base_url = "https://api.monkeytype.com" 
 ape_key = "cle_api"
 
-async def main():
+async def public_datas_fetch():
     async with aiohttp.ClientSession() as session:
         async with session.get(base_url + '/public/typingStats') as resp:
           datas = await resp.json()
@@ -16,7 +16,7 @@ async def main():
           print('Nombre de tests complétés : ' + str(testsCompleted))
           print('Nombre de tests commencés : ' + str(testsStarted))
           print('Temps de frape total : ' + str(timeTyping))
-asyncio.run(main())
+asyncio.run(public_datas_fetch())
 
 
 
