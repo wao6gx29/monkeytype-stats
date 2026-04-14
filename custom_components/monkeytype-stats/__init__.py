@@ -5,7 +5,7 @@ import asyncio
 base_url = "https://api.monkeytype.com" 
 ape_key = "cle_api"
 
-async def main()
+async def main():
     async with aiohttp.ClientSession() as session:
         async with session.get(base_url + '/public/typingStats') as resp:
           print(resp.status)
