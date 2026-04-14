@@ -19,10 +19,11 @@ async def public_datas_fetch():
 asyncio.run(public_datas_fetch())
 
 profile_params = {'name': 'odghsx', 'Authorization': f'ApeKey {ape_key}'}
+profile_headers ={'Authorization': f'ApeKey {ape_key}'}
 
 async def profile_datas_fetch():
     async with aiohttp.ClientSession() as session:
-        async with session.get(base_url + '/users/streak') as resp:
+        async with session.get(base_url + '/users/streak', params = profile_params, headers = profile_headers) as resp:
           datas = await resp.json()
           code = resp.status
           print(code)
